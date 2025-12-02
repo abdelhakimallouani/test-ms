@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div id="form">
+            <label for="loan">loan amount</label><br>
+            <input type="number" id="loan" name="loan"><br>
+            <label for="duration">duration in months</label><br>
+            <input type="number" id="duration" name="duration"><br>
+            <label for="salary">salary</label><br>
+            <input type="number" id="salary" name="salary"><br>
+        </div>
+        <div>
+            <button id="calcul">Calculate</button>
+        </div>
+    </section>
+    <p id="result"></p>
+
+
+    <script>
+
+        const loan = document.getElementById('loan');
+        const duration = document.getElementById('duration');
+        const salary = document.getElementById('salary');
+        const calculBtn = document.getElementById('calcul');
+        const result = document.getElementById('result');
+
+        function insertrate(duration) {
+            if (duration <= 12) {
+                return 0.03; 
+            } else if (duration <= 36) {
+                return 0.05; 
+            } else {
+                return 0.07; 
+            }
+        }
+
+        function calcul(){
+             const total = loan  (1+rate)
+
+        }
+
+    </script>
+</body>
+
+</html>
+
+<!-- 
+Create a page with:
+
+Input: loan amount
+
+Input: duration in months
+
+Input: salary
+
+Button: Calculate
+
+<p id="result"></p>
+
+Logic to implement
+1. Interest rate depends on duration
+
+Use these rules:
+
+Duration (months)    Interest rate
+≤ 12 months    3%
+13–36 months    5%
+>36 months    7%
+
+
+
+
+2. Monthly payment formula
+
+Total to repay:
+
+total = amount × (1+rate)
+
+Mensualité:
+
+mensualité = total / duration
+    
+
+
+
+3. Salary rule (40%)
+
+If mensualité > 40% of salary → show:
+
+"Refusé : mensualité trop élevée (X MAD) pour un salaire de Y."
+
+Else → show a full summary:
+
+Montant demandé
+
+Durée
+
+Taux appliqué
+
+Mensualité
+
+Total à rembourser
+-->
